@@ -9,12 +9,21 @@ const routes: Routes = [
     component: OffersPage,
   },
   {
-    path: 'offer',
-    loadChildren: () => import('./offer/offer.module').then( m => m.OfferPageModule)
+    path: "new",
+    loadChildren: () =>
+      import("./offer/offer.module").then((m) => m.OfferPageModule),
   },
   {
-    path: 'offer-bookings',
-    loadChildren: () => import('./offer-bookings/offer-bookings.module').then( m => m.OfferBookingsPageModule)
+    path: "edit/:placeId",
+    loadChildren: () =>
+      import("./offer/offer.module").then((m) => m.OfferPageModule),
+  },
+  {
+    path: ":placeId",
+    loadChildren: () =>
+      import("./offer-bookings/offer-bookings.module").then(
+        (m) => m.OfferBookingsPageModule
+      ),
   },
 ];
 
