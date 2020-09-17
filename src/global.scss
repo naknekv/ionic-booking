@@ -41,3 +41,10 @@ $xl: 1200px;
     }
   }
 }
+
+// Change width of side drawer in desktop
+.split-pane-ios.split-pane-visible > .split-pane-side,
+.split-pane-md.split-pane-visible > .split-pane-side {
+  max-width: 15vw;
+  min-width: 15vw;
+}
