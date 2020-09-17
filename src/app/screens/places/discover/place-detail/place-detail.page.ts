@@ -35,6 +35,7 @@ export class PlaceDetailPage implements OnInit {
       .create({
         component: CreateBookingComponent,
         componentProps: { place: this.place },
+        cssClass: "my-modal",
       })
       .then((modalEl) => {
         modalEl.present();
