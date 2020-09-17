@@ -14,7 +14,6 @@ export class OfferPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private navCtrl: NavController,
     private placesService: PlacesService
   ) {}
 
