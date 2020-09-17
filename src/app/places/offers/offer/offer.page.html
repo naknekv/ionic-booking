@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>offer</ion-title>
+    <ion-title *ngIf="!place">New place</ion-title>
+    <ion-title *ngIf="place">Edit place</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="places/offers"></ion-back-button>
     </ion-buttons>

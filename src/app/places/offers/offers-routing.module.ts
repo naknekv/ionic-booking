@@ -14,7 +14,7 @@ const routes: Routes = [
       import("./offer/offer.module").then((m) => m.OfferPageModule),
   },
   {
-    path: "edit/:placeId",
+    path: ":placeId/edit",
     loadChildren: () =>
       import("./offer/offer.module").then((m) => m.OfferPageModule),
   },
