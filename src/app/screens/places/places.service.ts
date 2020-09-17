@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Place } from "../models/Place.model";
+import { Place } from "src/app/models/Place.model";
 
 @Injectable({
   providedIn: "root",
