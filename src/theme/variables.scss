@@ -77,6 +77,8 @@
 
   /** Custom styles **/
   /* --ion-font-family: Arial, sans-serif; */
+  --ion-toolbar-background: var(--ion-color-primary, white);
+  --ion-toolbar-color: var(--ion-color-primary-contrast, black);
 }
 
 @media (prefers-color-scheme: dark) {
