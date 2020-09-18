@@ -32,16 +32,20 @@ export class LoginPage implements OnInit {
   }
 
   login = () => {
-    if (
-      this.form.value.email === "test@test.com" &&
-      this.form.value.password === "123456aS"
-    ) {
-      this.authService.login();
-      this.router.navigateByUrl("/places/discover");
-      this.menuCtrl.enable(true);
-      console.log(this.form);
+    if (this.form.valid) {
+      if (
+        this.form.value.email === "test@test.com" &&
+        this.form.value.password === "123456aS"
+      ) {
+        this.authService.login();
+        this.router.navigateByUrl("/places/discover");
+        this.menuCtrl.enable(true);
+        console.log(this.form);
+      } else {
+        this.error = "Username/password not valid.";
+      }
     } else {
-      this.error = "Username/password not valid";
+      this.error = "Username and password are required.";
     }
   };
 }
