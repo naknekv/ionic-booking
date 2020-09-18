@@ -15,8 +15,10 @@ export class OfferItemComponent implements OnInit {
 
   ngOnInit() {}
 
-  openEditPage(itemId: string, slidingItem: IonItemSliding) {
+  openEditPage = (itemId: string, slidingItem: IonItemSliding) => {
     slidingItem.close();
     this.router.navigate(["places/offers", itemId, "edit"]);
-  }
+  };
+
+  getDate = () => new Date();
 }
