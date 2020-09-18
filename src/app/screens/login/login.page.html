@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-button color="primary" (click)="login()"> Login </ion-button>
+  <ion-grid class="ion-margin-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="5" class="ion-text-center">
+        <h1>Login</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="5">
+        <form [formGroup]="form" (ngSubmit)="login()">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="error" lines="none">
+              <ion-text color="red" class="ion-padding">{{error}}</ion-text>
+            </ion-item>
+          </ion-list>
+          <ion-button
+            color="primary"
+            (click)="login()"
+            expand="block"
+            class="ion-margin"
+          >
+            Login
+          </ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
