@@ -5,7 +5,7 @@ import { AuthGuard } from "./screens/login/auth.guard";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "places/discover",
+    redirectTo: "login",
     pathMatch: "full",
   },
   {

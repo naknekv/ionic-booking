@@ -20,22 +20,25 @@ export class LoginPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // Disable menu
-    this.menuCtrl.enable(false);
-
     this.form = this.fb.group({
       email: ["", [Validators.required]],
       password: ["", [Validators.required]],
     });
   }
 
-  public login = () => {
+  ionViewWillEnter() {
+    // Disable menu
+    this.menuCtrl.enable(false);
+  }
+
+  login = () => {
     if (
       this.form.value.email === "test@test.com" &&
-      this.form.value.password === "password"
+      this.form.value.password === "123456aS"
     ) {
       this.authService.login();
       this.router.navigateByUrl("/places/discover");
+      this.menuCtrl.enable(true);
       console.log(this.form);
     } else {
       this.error = "Username/password not valid";

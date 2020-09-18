@@ -15,6 +15,7 @@ export class AuthService {
 
   logout = () => {
     this.userIsAuthenticated = false;
+    console.log("hi?");
     this.router.navigateByUrl("");
   };
 }
